@@ -12,7 +12,10 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.195.128:8848
+        server-addr: 127.0.0.1:8849
         cluster-name: NJ
+    sentinel:
+      transport:
+        dashboard: localhost:8080
 server:
   port: 8081
