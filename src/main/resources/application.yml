@@ -17,8 +17,19 @@ spring:
     sentinel:
       transport:
         dashboard: localhost:8080
+    stream:
+      rocketmq:
+        binder:
+          name-server: 127.0.0.1:9876
+      bindings:
+        input:
+          destination: add-bonus
+          group: binder-group
 server:
   port: 8081
+logging:
+  level:
+    com.alibaba.nacos: error
 rocketmq:
   name-server: 127.0.0.1:9876
   producer:
