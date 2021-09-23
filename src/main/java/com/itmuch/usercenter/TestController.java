@@ -15,8 +15,9 @@ public class TestController {
     private UserMapper userMapper;
     @Autowired
     private ApplicationContext applicationContext;
+
     @GetMapping("/test")
-    public User testInsert(){
+    public User testInsert() {
         User user = new User();
         user.setAvatarUrl("xxx");
         user.setCreateTime(new Date());
