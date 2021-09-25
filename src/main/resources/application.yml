@@ -30,7 +30,11 @@ server:
 logging:
   level:
     com.alibaba.nacos: error
-rocketmq:
-  name-server: 127.0.0.1:9876
-  producer:
-    group: test-group
+#rocketmq:
+#  name-server: 127.0.0.1:9876
+#  producer:
+#    group: test-group
+jwt:
+  secret: aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+  # 有效期，单位秒，默认2周
+  expire-time-in-second: 1209600
