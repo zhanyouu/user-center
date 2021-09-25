@@ -21,6 +21,7 @@ public class AddBonusStreamConsumer {
 
     @StreamListener(Sink.INPUT)
     public void receive(UserAddBonusMsgDTO message) {
+        log.info("rocketmq获取到的message:"+message.toString());
         message.setEvent("CONTRIBUTE");
         message.setDescription("投稿加积分..");
         this.userService.addBonus(message);
