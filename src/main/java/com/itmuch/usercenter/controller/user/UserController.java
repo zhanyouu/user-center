@@ -34,7 +34,7 @@ public class UserController {
     private JwtOperator jwtOperator;
 
     @GetMapping("/{id}")
-    @CheckLogin
+//    @CheckLogin
     public User findById(@PathVariable Integer id) {
         log.info("我被请求了...");
         return this.userService.findById(id);
